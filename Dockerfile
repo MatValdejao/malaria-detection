@@ -1,7 +1,10 @@
 FROM tensorflow/tensorflow:latest-gpu
 
+# copy dependencies
+COPY requirements.txt .
+
 # install jupyter notebook and fixed dependencies
-RUN pip install --upgrade pip notebook matplotlib numpy pandas scikit-learn pillow kagglehub 
+RUN pip install -r requirements.txt
 
 # set working directory
 WORKDIR /workspace
