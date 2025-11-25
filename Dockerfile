@@ -4,7 +4,8 @@ FROM tensorflow/tensorflow:latest-jupyter
 COPY requirements.txt .
 
 # install jupyter notebook and fixed dependencies
-RUN pip install upgrade pip && -r requirements.txt
+RUN pip install --upgrade pip && \ 
+    pip install -r requirements.txt
 
 # install git lfs
 RUN apt-get update && \
