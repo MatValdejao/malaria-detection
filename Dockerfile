@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:latest-gpu
+FROM tensorflow/tensorflow:latest-jupyter
 
 # copy dependencies
 COPY requirements.txt .
