@@ -209,3 +209,6 @@ __marimo__/
 
 # python virtual env
 .sklearn-env/
+
+# dev container
+.devcontainer/
