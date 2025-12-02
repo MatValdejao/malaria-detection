@@ -21,6 +21,9 @@ RUN python -m ipykernel install \
     --display-name "Python (Container)" \
     --prefix /usr/local
 
+# need to run code-server for vscode in docker
+RUN curl -fsSL https://code-server.dev/install.sh | sh
+
 # set working directory
 WORKDIR /workspace
 
@@ -29,4 +32,6 @@ EXPOSE 8888
 EXPOSE 8080
 
 # add command to run jupyter notebook
-CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
+CMD bash -c "\
+    jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token = 'myToken' & \"
+    code-server --bind-addr=0.0.0.0:8080 --auth password --password='mytoken'
