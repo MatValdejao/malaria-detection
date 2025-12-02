@@ -26,6 +26,7 @@ WORKDIR /workspace
 
 # expose port
 EXPOSE 8888
+EXPOSE 8080
 
 # add command to run jupyter notebook
 CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--no-browser", "--allow-root"]
