@@ -33,5 +33,5 @@ EXPOSE 8080
 
 # add command to run jupyter notebook
 CMD bash -c "\
-    jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token = 'myToken' & \"
-    code-server --bind-addr=0.0.0.0:8080 --auth password --password='mytoken'
+    jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token = 'myToken' & \
+    code-server --bind-addr=0.0.0.0:8080 --auth password --password='mytoken'"
