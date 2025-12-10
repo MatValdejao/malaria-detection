@@ -35,6 +35,17 @@ def arrange_plots(images: np.ndarray, labels: np.ndarray):
             if labels[i * cols + j]:
                 ax.set_title('Parasitized Cell')
             else: 
-                ax.set_title('Uninfeceted Cell')
+                ax.set_title('Uninfected Cell')
 
-    fig.show()
+    return fig.show()
+
+def average_image(images: np.ndarray, label: str):
+
+    # find the mean image, splice per row
+    mean_image = np.mean(images, axis=0)[0]
+
+    # show image
+    plt.imshow(mean_image)
+
+    plt.title(label + ' Average Image')
+    return plt.show()
