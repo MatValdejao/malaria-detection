@@ -40,12 +40,11 @@ def arrange_plots(images: np.ndarray, labels: np.ndarray):
     return fig.show()
 
 def average_image(images: np.ndarray, label: str):
-
     # find the mean image, splice per row
     mean_image = np.mean(images, axis=0)[0]
 
     # show image
-    plt.imshow(mean_image)
+    plt.imshow(mean_image/255)
 
     plt.title(label + ' Average Image')
     return plt.show()
