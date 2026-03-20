@@ -1,7 +1,13 @@
 # Malaria Detection Notebook
 
+## Table of Contents
+
 ## Objective:
 Objective of this notebook is to create a Deep Learning CNN model to classify single cell images as either parasitized or not with Malaria. The focus of this project will be optimization of recall on the parasitized class, aiming that no positive case is left unnoticed. 
+
+## Project Overview & Architecture
+
+## Dataset
 
 ## Dev and Execution Options:
 - **To run project**: clone repo
@@ -34,5 +40,10 @@ Works on CPU and GPU, thugh GPU is slower
         docker build -t project-name .
         docker run --gpus all -it -p 8888:8888 -p 8080:8080 project-name
 
-### Utilization of TensorFlow, Keras, Scickit, and other Python Libraries.
+## Dependencies
+See requirements.txt file for dependency list
+
+## Results/Eval
+
+
 
