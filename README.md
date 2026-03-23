@@ -44,6 +44,8 @@ Works on CPU and GPU, thugh GPU is slower
 See requirements.txt file for dependency list
 
 ## Results/Eval
+Objetive was to bias final model towards positive case recall, as the least desired result in a medical case is to leave a positive case untreated. Base model with convolutions, incrementing complexity and finally biasing towards positive class recall. 
 
+- Final model achieved 97% recall on positive cases, ensuring minimal false negatives 
 
 
