@@ -1,13 +1,24 @@
 # Malaria Detection Notebook
 
 ## Table of Contents
+- [Objective](#objective)
+- [Project Overview & Architecture](#project-overview--architecture)
+- [Dataset](#dataset)
+- [Dev and Execution Options:](#dev-and-execution-options)
+- [Dependencies](#dependencies)
+- [Results/Eval](#resultseval)
+
 
 ## Objective:
 Objective of this notebook is to create a Deep Learning CNN model to classify single cell images as either parasitized or not with Malaria. The focus of this project will be optimization of recall on the parasitized class, aiming that no positive case is left unnoticed. 
 
 ## Project Overview & Architecture
+Project utilized single cell images classified into infected or uninfected to train convolutional model for image classification. 
+
 
 ## Dataset
+Dataset used for this project is from kagglehub.
+https://www.kaggle.com/datasets/iarunava/cell-images-for-detecting-malaria
 
 ## Dev and Execution Options:
 - **To run project**: clone repo
@@ -26,10 +37,10 @@ Objective of this notebook is to create a Deep Learning CNN model to classify si
 Works on CPU and GPU, thugh GPU is slower
 
 #### Option 2: Google Colab (Quick Iteration and GPU)
-- Clone or forck repository
-- Upload cell_images and src python scripts into your drive
+- Clone or fork repository
+- Upload cell_images and src python scripts into drive
 - Open notebook in colab or using Colab-connected IDE
-- Emable GPU runtime
+- Enable GPU runtime
 - Ensure to run setup cells 1 and 2.
 
 #### Option 3: Docker (GPU, Production-like)
@@ -48,4 +59,4 @@ Objetive was to bias final model towards positive case recall, as the least desi
 
 - Final model achieved 97% recall on positive cases, ensuring minimal false negatives 
 
-
+Final model without biasing still achieved really good results in recall, without same hit to precision. In this case, however, biased model might still be desirable.
