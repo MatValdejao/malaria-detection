@@ -14,7 +14,8 @@ Objective of this notebook is to create a Deep Learning CNN model to classify si
 
 ## Project Overview & Architecture
 Project utilized single cell images classified into infected or uninfected to train convolutional model for image classification. 
-
+![Architecture Image](assets/arch_img.png)
+- During training bias was introduced towards class 1 images via focal binary cross entropy, focusing on achieving higher recall on positive images. 
 
 ## Dataset
 Dataset used for this project is from kagglehub.
